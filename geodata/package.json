@@ -5,7 +5,11 @@
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@jon20111/drawer-inside-div": "^1.0.10",
+    "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.1",
+    "@mui/styled-engine-sc": "^5.4.2",
+    "@mui/styles": "^5.5.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -13,7 +17,15 @@
     "npm": "^8.5.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-elastic-carousel": "^0.11.5",
+    "react-image-gallery": "^1.2.7",
+    "react-material-ui-carousel": "^2.3.8-mui5",
+    "react-player": "^2.9.0",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "react-simple-image-slider": "^2.4.1",
+    "styled-components": "^5.3.3",
+    "video-react": "^0.15.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
