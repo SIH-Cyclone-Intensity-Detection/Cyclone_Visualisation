@@ -7,13 +7,13 @@ import Typography   from '@mui/material/Typography';
 import Box          from '@mui/material/Box';
 
 const images = [
-    { url: "https://picsum.photos/id/1015/896/504/" },
-    { url: "https://picsum.photos/id/1016/896/504/" },
-    { url: "https://picsum.photos/id/1022/896/504/" },
-    { url: "https://picsum.photos/id/1018/896/504/" },
-    { url: "https://picsum.photos/id/1019/896/504/" },
-    { url: "https://picsum.photos/id/1020/896/504/" },
-    { url: "https://picsum.photos/id/1021/896/504/" },
+    { url: "/videos/16MAY2020_0000.png" },
+    { url: "/videos/16MAY2020_0000.png" },
+    { url: "/videos/16MAY2020_0000.png" },
+    { url: "/videos/16MAY2020_0000.png" },
+    { url: "/videos/16MAY2020_0000.png" },
+    { url: "/videos/16MAY2020_0000.png" },
+    { url: "/videos/16MAY2020_0000.png" },
 ];
 
 
@@ -23,16 +23,18 @@ function ImageCarousel(){
         function handleChange(newValue){
             setVal(newValue);
         }
+        console.log(val)
         return (
             <div style={{backgroundColor:'black'}}>
                 <Carousel   
                             index={val}
                             autoPlay={false}
+                            interval={1000}
                             indicators={false}
                             navButtonsAlwaysVisible={true}
                             stopAutoPlayOnHover={true}
-                            sx={{height: '720px',width:'1280px',p:0,backgroundColor:'black'}}
-                
+                            sx={{height: '720px',width:'1280px',p:0,backgroundColor:'red'}}
+                            next={(now) => handleChange(now)}
                             //changeOnFirstRender={true}
                             >
                     
@@ -51,6 +53,7 @@ function ImageCarousel(){
 }
   
 function Slide(props) {
+    console.log("sidhu",props)
     function handleChange(event,value) {
         // Here, we invoke the callback with the new value
         props.onChange(value);
@@ -59,7 +62,7 @@ function Slide(props) {
         <Box sx={{backgroundColor:'#8c8c8c',borderTop:'4px solid black',p:2}} >
             <Typography gutterBottom sx={{marginBottom:4}} >Slide to view more photos</Typography>
             <Slider 
-            
+            value={props.val}
             valueLabelDisplay="on" 
             //components={{ ValueLabel: ValueLabelComponent }} 
             aria-label="custom thumb label" 

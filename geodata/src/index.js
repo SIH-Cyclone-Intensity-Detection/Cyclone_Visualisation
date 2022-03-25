@@ -3,9 +3,11 @@ import ReactDOM        from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import App from './App';
-import Content from './components/Content';
-import Picture              from './components/Picture'
+import App        from './App';
+import Home       from './components/Home'
+import Picture    from './components/Picture'
+import Register   from './components/Register'
+import Login      from './components/Login'
 
 import {
   BrowserRouter as Router,
@@ -16,21 +18,18 @@ import {
 ReactDOM.render(
   <Router>
     <Routes>
-      <Route path="/"           element={<Home      />}/>
+      <Route path="/"                 element={<Home      />}/>
+      <Route path="/register"         element={<Register  />}/>
+      <Route path="/login"            element={<Login  />}/>
 
       <Route path="dashboard"         element={<App       />}>
+        <Route path="Fani/:pid"     element={<Picture   />}/>
         
-        <Route path="amphan"          element={<Content   />}/>
-        <Route path="amphan/:pid"     element={<Picture   />}/>
-        
-        <Route path="amphan2"          element={<Content   />}/>
-        <Route path="amphan2/:pid"     element={<Picture   />}/>
+        <Route path="Amphan/:pid"     element={<Picture   />}/>
 
-        <Route path="amphan3"          element={<Content   />}/>
-        <Route path="amphan3/:pid"     element={<Picture   />}/>
+        <Route path="Nisarg/:pid"     element={<Picture   />}/>
 
-        <Route path="amphan4"          element={<Content   />}/>
-        <Route path="amphan4/:pid"     element={<Picture   />}/>
+        <Route path="Tauktae/:pid"     element={<Picture   />}/>
 
       </Route>
       
@@ -45,10 +44,6 @@ ReactDOM.render(
 reportWebVitals();
 
 
-function Home(){
-  return(
-    <h1>Home Route</h1>
-  )
-}
+
 
 

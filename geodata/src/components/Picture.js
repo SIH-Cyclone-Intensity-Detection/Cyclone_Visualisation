@@ -36,25 +36,26 @@ function Picture(){
                 
                 </Box>  
 
-                <Box  sx={{
+                <Container  sx={{
                             display: 'flex',
                             //border: '1px solid blue',
                             backgroundColor: '#bdced9',
                             width: 'inherit',
-                            border:'4px solid black'
+                            border:'4px solid black',
+                            padding:'0px !important'
                         }}
                 >
 
-                    <Box sx={{flexGrow:1,}}> 
+                    <Box sx={{flexGrow:0,maxWidth:'20%'}}> 
                         <Info/>
                     </Box>
-                    <Box sx={{flexGrow:0,backgroundColor:'#bdced9',m:7}}>
-                        <video autoFocus autoPlay  loop   style={{height:'70%',width:'100%'}}>
+                    <Box sx={{flexGrow:0,backgroundColor:'#bdced9',m:7,alignItems:'center'}}>
+                        <video autoFocus autoPlay controls loop   style={{height:'100%',width:'100%',marginLeft:'15%'}}>
                             <source src='/videos/my.mp4' type="video/mp4"/>
                         </video>
                     </Box>
                     
-                </Box>
+                </Container>
                 
 
 
